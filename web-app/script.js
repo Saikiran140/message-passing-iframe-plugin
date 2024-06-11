@@ -1,5 +1,15 @@
 document.getElementById('myButton').addEventListener('click', function() {
-    window.parent.postMessage({ type: 'BUTTON_CLICKED', message: 'Button clicked!' }, '*');
+    const textArea = document.getElementById('myTextarea');
+
+    SIVI.open(textArea.value)
+
+    // window.parent.postMessage({ type: 'BUTTON_CLICKED', message: 'Button clicked!' }, '*');
+});
+
+document.getElementById('close').addEventListener('click', function() {
+    SIVI.close()
+
+    // window.parent.postMessage({ type: 'BUTTON_CLICKED', message: 'Button clicked!' }, '*');
 });
 
 window.addEventListener('message', function(event) {
