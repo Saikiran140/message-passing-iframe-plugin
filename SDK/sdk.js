@@ -2,7 +2,7 @@
     // Function to create the iFrame
     function createIframe(prompt) {
         const iframe = document.createElement('iframe');
-        iframe.src = `http://localhost:4848/#/?customPrompt=${prompt}`;
+        iframe.src = `http://localhost:4848/#/?origin=iframe`;
         iframe.style.width = '71%';
         iframe.style.height = '50%';
         iframe.style.position = 'fixed';
